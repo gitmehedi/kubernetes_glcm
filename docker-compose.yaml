@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  web:
+    image: glcm:latest
+    build: .
+    ports:
+      - 9000:9000
+    container_name: glcm-web

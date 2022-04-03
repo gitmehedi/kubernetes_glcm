@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Online Web App for GLCM Algorithm</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='js/utils.js')}}"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/custom.css')}}">
+</head>
+
+<body>
+<div><h1 style="text-align: center; margin-top: 50px;">Online Web App for GLCM Algorithm</h1></div>
+<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+    <div class="row">
+        <div id="distance" class="col-12">
+            <button class="btn btn-light cls-distance d-active">d=1</button>
+            <button class="btn cls-distance">d=2</button>
+            <button class="btn cls-distance">d=3</button>
+        </div>
+    </div>
+    <div class="row">
+        <div id="theta" class="col-12" style="margin-top:10px;">
+            <button class="btn cls-theta t-active">&theta;=0</button>
+            <button class="btn cls-theta">&theta;=45</button>
+            <button class="btn cls-theta">&theta;=90</button>
+            <button class="btn cls-theta">&theta;=135</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3" style="text-align: center;">
+            <div id="first-matrix"></div>
+            <span>Input Matrix 6*6</span>
+        </div>
+        <div class="col-5 pull-right" style="text-align: center;">
+            <div id="glcm-matrix"></div>
+            <span>GLCM Matrix 8*8</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
